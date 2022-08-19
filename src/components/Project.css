@@ -1,0 +1,67 @@
+.projectDiv{
+    width: 78%;
+    height: 800px;
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 100px;
+}
+.imageDiv{
+    width: 100%;
+    height: 70%;
+    /* border: 1px solid black; */
+    cursor: pointer;
+    overflow: hidden;
+}
+.imageDiv>img{
+    width: 100%;
+    height: 100%;
+    transition: transform 2s;
+}
+.imageDiv:hover img{
+    transform: scale(1.1);
+} 
+.contentdiv{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    /* border: 1px solid black; */
+    margin-top: -1px;
+}
+.conhead{
+    /* border: 1px solid black; */
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+.conbody{
+    /* border: 1px solid black; */
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.conhead>p{
+    font-size: 35px;
+    font-weight: 500;
+}
+.conbody>p{
+    font-size: 30px;
+}
+.textbtn{
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    /* border: 1px solid black; */
+}
+.textbtn:hover {
+    
+    transition: transform 2s;
+    transform: scale(1.1);
+    
+}

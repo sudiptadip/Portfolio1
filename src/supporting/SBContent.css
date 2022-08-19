@@ -1,0 +1,20 @@
+.sidebarmaindiv{
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-top: 0px;
+}
+
+.contentdivs{
+    width: 100%;
+    display: flex;
+    margin-top: 250px;
+    font-size: 35px;
+    justify-content: space-around;
+    font-weight: 500;
+}
+.big{
+    font-size: 60px;
+    margin-top: -50px;
+}
+

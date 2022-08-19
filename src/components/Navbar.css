@@ -1,0 +1,31 @@
+.navbox{
+    width: 100%;
+    height: 150px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+}
+
+.imagediv{
+    /* border: 1px solid black; */
+    height: 150px;
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.icondiv{
+    /* border: 1px solid black; */
+    width: 120px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.Iconbtn{
+    cursor: pointer;
+    width: 80%;
+    margin-top: 20px;
+}
+
