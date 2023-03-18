@@ -1,36 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
-import { useEffect, useState } from 'react';
-import Home from './pages/Home';
-import AllRoute from './pages/AllRoute';
+// import logo from './logo.svg';
+import "aos/dist/aos.css";
+import { useRef } from "react";
+import Navbar from "./components/Navbar/Navbar";
+import { ScrollToTop } from "./components/ScrollToTop/ScrollToTop";
+import SideBarIcons from "./components/sideIcons/SideIcons";
+import AllRoutes from "./Routes/AllRoutes";
 
 function App() {
+  const home = useRef(null);
+  const about = useRef(null);
+  const work = useRef(null);
+  const tech = useRef(null);
+  const skills = useRef(null);
+  const conatct = useRef(null);
+  // const about =useRef(null);
 
- 
-
-  const [color,setcolor] = useState("white")
-
-  function colorfun(){
-    if(window.scrollY >= 50 && window.scrollY < 1000){
-      setcolor('first')
-    }else if(window.scrollY >= 1000 && window.scrollY < 1800){
-      setcolor('second')
-    }else if(window.scrollY >= 1800 && window.scrollY < 2000){
-      setcolor('third')
-    }  
-     else if(window.scrollY < 50){
-      setcolor('white')
-    }
+  const scrollsection = (elementref) => {
+    window.scrollTo({
+      top: elementref.current.offsetTop,
+      behavior: "smooth",
+    });
+    // <Button onClick={()=>scrollsection(home)}>Amolll</Button>
+  };
+  {
+    /* <Button onClick={()=>scrollsection(services)}>Amolll</Button> */
   }
 
-   window.addEventListener('scroll', colorfun)
-
-
-  
   return (
-    <div className={`App ${color}`} >
-        <AllRoute/>
-    </div>
+    <>
+      <Navbar
+        props={{ scrollsection, about, tech, work, conatct, home, skills }}
+      />
+      <AllRoutes
+        props={{ scrollsection, about, tech, work, conatct, home, skills }}
+      />
+
+      <ScrollToTop props={{ scrollsection, home }} />
+      <SideBarIcons />
+
+      {/* <About /> */}
+
+      {/* <Example /> */}
+      {/* <Footer /> */}
+    </>
   );
 }
 
