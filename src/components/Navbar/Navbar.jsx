@@ -99,7 +99,6 @@ const Navbar = ({ props }) => {
   return (
     <>
       <Desktop>
-        {" "}
         <Box
           fontFamily="poppins"
           style={Nav_style}

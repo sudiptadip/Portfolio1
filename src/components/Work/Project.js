@@ -1,8 +1,44 @@
 export const Project = [
   {
+    title: "Shoe Ecommerce",
+    description: "I developed a dynamic and responsive e-commerce store as part of my portfolio, leveraging a robust tech stack including HTML, CSS, and JavaScript for the front-end, coupled with ASP.NET MVC and ASP.NET Core for the back-end. The application follows a clean architecture with the implementation of the repository pattern for efficient data access. Bootstrap was utilized to ensure a visually appealing and mobile-friendly design.",
+    techStack: [
+      "html",
+      "javascript",
+      "csharp",
+      "aspdotnet",
+      "dotnet",
+      "bootstrap",
+    ],
+    deploy: false,
+    mainImg:
+      "https://i.postimg.cc/2yJydCn1/image.png",
+    slideImg: [
+      {
+        id: 1,
+        src: "https://user-images.githubusercontent.com/103682371/202778604-eff6ba8e-9acf-40d4-b843-9533acbd3ac4.jpg",
+      },
+      {
+        id: 2,
+        src: "https://user-images.githubusercontent.com/103682371/202779145-99882941-5f8c-40e6-b28d-1ca4f1a626d4.png",
+      },
+      {
+        id: 3,
+        src: "https://boutique.humbleandrich.com/wp-content/uploads/2019/04/ASOS.jpg",
+      },
+      {
+        id: 4,
+        src: "https://user-images.githubusercontent.com/103682371/202779145-99882941-5f8c-40e6-b28d-1ca4f1a626d4.png",
+      },
+    ],
+    githubUrl: "https://github.com/sudiptadip/ShoeEcom",
+    live: "",
+  },
+  {
     title: "Asos.com Clone",
     description:
-      "ASOS is a Men and Women's fashion brand for the newest & trending Cloths,fashion accessories and online shop that offered high quality products at an affordable price.",
+    "I designed and implemented a dynamic web application utilizing a modern tech stack, featuring HTML, JavaScript, and React.js for a responsive front-end. Chakra UI was employed to create a visually appealing and user-friendly interface. The application's state management was handled efficiently using Redux. MongoDB served as the database, seamlessly integrated with Express.js for robust server-side functionality. This project demonstrates my expertise in front-end development with React.js, UI design with Chakra UI, and back-end proficiency using MongoDB and Express.js, showcasing a comprehensive understanding of full-stack web development.",
+    deploy: true,
     techStack: [
       "html",
       "javascript",
@@ -38,7 +74,8 @@ export const Project = [
   {
     title: "SUGAR Cosmetics Clone",
     description:
-      "SUGAR Cosmetics is a cruelty-free makeup brand that is high on style and higher on performance. The brand is inspired by and targeted towards bold, independent women who refuse to be stereotyped into roles",
+    "I designed and implemented a dynamic web application utilizing a modern tech stack, featuring HTML, JavaScript, and React.js for a responsive front-end. Chakra UI was employed to create a visually appealing and user-friendly interface. The application's state management was handled efficiently using Redux. MongoDB served as the database, seamlessly integrated with Express.js for robust server-side functionality. This project demonstrates my expertise in front-end development with React.js, UI design with Chakra UI, and back-end proficiency using MongoDB and Express.js, showcasing a comprehensive understanding of full-stack web development.",
+    deploy: true,
     techStack: [
       "html",
       "javascript",
@@ -73,9 +110,44 @@ export const Project = [
     live: "https://sugar-clone.vercel.app/",
   },
   {
+    title: "Cricbuzz Clone",
+    description:
+    "I designed and implemented a dynamic web application utilizing a modern tech stack, featuring HTML, JavaScript, and React.js for a responsive front-end. Chakra UI was employed to create a visually appealing and user-friendly interface. The application's state management was handled efficiently using Redux. MongoDB served as the database, seamlessly integrated with Express.js for robust server-side functionality. This project demonstrates my expertise in front-end development with React.js, UI design with Chakra UI, and back-end proficiency using MongoDB and Express.js, showcasing a comprehensive understanding of full-stack web development.",
+    deploy: true,
+    techStack: [
+      "html",
+      "css",
+      "javascript",
+    ],
+    mainImg:
+      "https://vijaysingh8650.github.io/static/media/cricbuzz.2046a8b13cd2af6a565e.png",
+    slideImg: [
+      {
+        id: 1,
+        src: "https://vijaysingh8650.github.io/static/media/cricbuzz.2046a8b13cd2af6a565e.png",
+      },
+      {
+        id: 2,
+        src: "https://vijaysingh8650.github.io/static/media/cricbuzz.2046a8b13cd2af6a565e.png",
+      },
+      {
+        id: 3,
+        src: "https://vijaysingh8650.github.io/static/media/cricbuzz.2046a8b13cd2af6a565e.png",
+      },
+      {
+        id: 4,
+        src: "https://vijaysingh8650.github.io/static/media/cricbuzz.2046a8b13cd2af6a565e.png",
+      },
+    ],
+    githubUrl:
+      "https://github.com/VijaySingh8650/cricbuzz",
+    live: "https://luxury-douhua-2f73cb.netlify.app/",
+  },
+  {
     title: "Expedia Clone",
     description:
-      "Expedia is one of the fastest growing online travel portals in Asia, offering travellers an extensive selection of hotels, activities and travel services.",
+    "I designed and implemented a dynamic web application utilizing a modern tech stack, featuring HTML, JavaScript, and React.js for a responsive front-end. Chakra UI was employed to create a visually appealing and user-friendly interface. The application's state management was handled efficiently using Redux. MongoDB served as the database, seamlessly integrated with Express.js for robust server-side functionality. This project demonstrates my expertise in front-end development with React.js, UI design with Chakra UI, and back-end proficiency using MongoDB and Express.js, showcasing a comprehensive understanding of full-stack web development.",
+    deploy: true,
     techStack: [
       "html",
       "javascript",

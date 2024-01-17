@@ -1,75 +1,63 @@
 import {
-    Box,
-    Center,
-    Flex,
-    Heading,
-    Image,
-    SimpleGrid,
-    Stack,
-    Tab,
-    TabList,
-    TabPanel,
-    TabPanels,
-    Tabs,
-    Text,
-    useColorMode,
-  } from "@chakra-ui/react";
-  import styles from "./tech.module.css";
-  import Marquee from "react-fast-marquee";
-  import { TechImage } from "./TechStackImg";
-  import { useMediaQuery } from 'react-responsive'
-  
-  const Desktop = ({ children }) => {
-      const isDesktop = useMediaQuery({ minWidth: 992 })
-      return isDesktop ? children : null
-    }
-    const Tablet = ({ children }) => {
-      const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
-      return isTablet ? children : null
-    }
-    const Mobile = ({ children }) => {
-      const isMobile = useMediaQuery({ maxWidth: 767 })
-      return isMobile ? children : null
-    }
-    const Default = ({ children }) => {
-      const isNotMobile = useMediaQuery({ minWidth: 768 })
-      return isNotMobile ? children : null
-    }
-  export const TechStack = () => {
-    const { colorMode, toggleColorMode } = useColorMode();
-    const BackendData = ["Firebase", "Nodejs", "Expressjs", "Mongodb"];
-    const Frontenddata = [
-      "HTML",
-      "CSS",
-      "Git",
-      "chakra",
-      "Bootstrap",
-      "Javascript",
-      "Redux",
-      "React",
-    ];
-    return (
-      <>
+  Box,
+  Center,
+  Heading,
+  Image,
+  SimpleGrid,
+  Stack,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+  Text,
+  useColorMode,
+} from "@chakra-ui/react";
+import styles from "./tech.module.css";
+import { TechImage } from "./TechStackImg";
+import { useMediaQuery } from "react-responsive";
+
+const Desktop = ({ children }) => {
+  const isDesktop = useMediaQuery({ minWidth: 992 });
+  return isDesktop ? children : null;
+};
+const Tablet = ({ children }) => {
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 });
+  return isTablet ? children : null;
+};
+const Mobile = ({ children }) => {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  return isMobile ? children : null;
+};
+export const TechStack = () => {
+  const { colorMode } = useColorMode();
+  const BackendData = ["Firebase", "Nodejs", "Expressjs", "Mongodb", "DotNet", "MsSql"];
+  const Frontenddata = [
+    "HTML",
+    "CSS",
+    "Git",
+    "chakra",
+    "Bootstrap",
+    "Javascript",
+    "Redux",
+    "React",
+    "Tailwind",
+    "AspDotNet",
+  ];
+  return (
+    <>
       <Desktop>
         <Box pt={10} pb={10} textAlign="center" fontFamily="poppins">
           <Heading
-           
             className={styles.Heading}
             mt={10}
             size="2xl"
             fontFamily="poppins"
           >
-            {" "}
-            Tech <span style={{ color: "#dc143c" }}> Stack </span> 
+            Tech <span style={{ color: "#dc143c" }}> Stack </span>
           </Heading>
           <Center>
-            <Tabs
-             
-              w="80%"
-              size="sm"
-              mt={10}
-              variant="unstyled"
-            >
+            <Tabs w="80%" size="sm" mt={10} variant="unstyled">
               <Center>
                 <TabList>
                   <Tab
@@ -103,23 +91,9 @@ import {
               </Center>
               <TabPanels>
                 <TabPanel>
-                  <Box
-                    mt="50px"
-                   
-                    fontFamily="poppins"
-                    className="skill--scroll"
-                  >
-                    {/* <Marquee 
-                          gradient={false} 
-                          speed={80} 
-                          pauseOnHover={true}
-                          pauseOnClick={true} 
-                          delay={0}
-                          play={true} 
-                          direction="left"
-                      > */}
+                  <Box mt="50px" fontFamily="poppins" className="skill--scroll">
                     <Center>
-                      <SimpleGrid columns={4} spacing={10}>
+                      <SimpleGrid columns={5} spacing={10}>
                         {Frontenddata.map((skill, id) => (
                           <Box
                             className={styles.boxes}
@@ -137,7 +111,9 @@ import {
                             borderRadius={10}
                             w="150px"
                             bg={colorMode === "light" ? "#0f1624" : "#edf2f8"}
-                            color={colorMode === "light" ? "#edf2f8" : "#0f1624"}
+                            color={
+                              colorMode === "light" ? "#edf2f8" : "#0f1624"
+                            }
                             key={id}
                           >
                             <Center>
@@ -163,12 +139,7 @@ import {
                   </Box>
                 </TabPanel>
                 <TabPanel>
-                  <Box
-                    mt="50px"
-                   
-                    fontFamily="poppins"
-                    className="skill--scroll"
-                  >
+                  <Box mt="50px" fontFamily="poppins" className="skill--scroll">
                     <Center>
                       <SimpleGrid columns={4} spacing={10}>
                         {BackendData.map((skill, id) => (
@@ -188,7 +159,9 @@ import {
                             borderRadius={10}
                             w="150px"
                             bg={colorMode === "light" ? "#0f1624" : "#edf2f8"}
-                            color={colorMode === "light" ? "#edf2f8" : "#0f1624"}
+                            color={
+                              colorMode === "light" ? "#edf2f8" : "#0f1624"
+                            }
                             key={id}
                           >
                             <Center>
@@ -217,28 +190,21 @@ import {
             </Tabs>
           </Center>
         </Box>
-        </Desktop>
-      
-        <Tablet>
+      </Desktop>
+
+      <Tablet>
         <Box pt={10} pb={10} textAlign="center" fontFamily="poppins">
           <Heading
-           
             className={styles.TabHeading}
             mt={10}
             size="2xl"
             fontFamily="poppins"
           >
             {" "}
-            Tech <span style={{ color: "#dc143c" }}> Stack </span> 
+            Tech <span style={{ color: "#dc143c" }}> Stack </span>
           </Heading>
           <Center>
-            <Tabs
-             
-              w="90%"
-              size="sm"
-              mt={10}
-              variant="unstyled"
-            >
+            <Tabs w="90%" size="sm" mt={10} variant="unstyled">
               <Center>
                 <TabList>
                   <Tab
@@ -272,13 +238,7 @@ import {
               </Center>
               <TabPanels>
                 <TabPanel>
-                  <Box
-                    mt="50px"
-                   
-                    fontFamily="poppins"
-                    className="skill--scroll"
-                  >
-                  
+                  <Box mt="50px" fontFamily="poppins" className="skill--scroll">
                     <Center>
                       <SimpleGrid columns={3} spacing={10}>
                         {Frontenddata.map((skill, id) => (
@@ -298,20 +258,21 @@ import {
                             borderRadius={10}
                             w="100px"
                             bg={colorMode === "light" ? "#0f1624" : "#edf2f8"}
-                            color={colorMode === "light" ? "#edf2f8" : "#0f1624"}
+                            color={
+                              colorMode === "light" ? "#edf2f8" : "#0f1624"
+                            }
                             key={id}
                           >
                             <Center>
-                            
                               <Stack>
-                            <Center>
-                                <Image
-                                  src={TechImage(skill)}
-                                  borderRadius={10}
-                                  alt={skill}
-                                  w="70px"
-                                  h="70px"
-                                />
+                                <Center>
+                                  <Image
+                                    src={TechImage(skill)}
+                                    borderRadius={10}
+                                    alt={skill}
+                                    w="70px"
+                                    h="70px"
+                                  />
                                 </Center>
                                 <Heading fontFamily="poppins" mt={3} size="sm">
                                   {skill}
@@ -326,12 +287,7 @@ import {
                   </Box>
                 </TabPanel>
                 <TabPanel>
-                  <Box
-                    mt="50px"
-                   
-                    fontFamily="poppins"
-                    className="skill--scroll"
-                  >
+                  <Box mt="50px" fontFamily="poppins" className="skill--scroll">
                     <Center>
                       <SimpleGrid columns={3} spacing={10}>
                         {BackendData.map((skill, id) => (
@@ -351,20 +307,21 @@ import {
                             borderRadius={10}
                             w="100px"
                             bg={colorMode === "light" ? "#0f1624" : "#edf2f8"}
-                            color={colorMode === "light" ? "#edf2f8" : "#0f1624"}
+                            color={
+                              colorMode === "light" ? "#edf2f8" : "#0f1624"
+                            }
                             key={id}
                           >
                             <Center>
-                            
                               <Stack>
-                            <Center>
-                                <Image
-                                  src={TechImage(skill)}
-                                  borderRadius={10}
-                                  alt={skill}
-                                  w="70px"
-                                  h="70px"
-                                />
+                                <Center>
+                                  <Image
+                                    src={TechImage(skill)}
+                                    borderRadius={10}
+                                    alt={skill}
+                                    w="70px"
+                                    h="70px"
+                                  />
                                 </Center>
                                 <Heading fontFamily="poppins" mt={3} size="sm">
                                   {skill}
@@ -382,27 +339,20 @@ import {
             </Tabs>
           </Center>
         </Box>
-        </Tablet>
-        <Mobile>
+      </Tablet>
+      <Mobile>
         <Box w="120%" pt={10} pb={10} textAlign="center" fontFamily="poppins">
           <Heading
-           
             className={styles.MobHeading}
             mt={10}
             size="2xl"
             fontFamily="poppins"
           >
             {" "}
-            Tech <span style={{ color: "#dc143c" }}> Stack </span> 
+            Tech <span style={{ color: "#dc143c" }}> Stack </span>
           </Heading>
           <Center>
-            <Tabs
-             
-              w="90%"
-              size="sm"
-              mt={10}
-              variant="unstyled"
-            >
+            <Tabs w="90%" size="sm" mt={10} variant="unstyled">
               <Center>
                 <TabList>
                   <Tab
@@ -436,13 +386,7 @@ import {
               </Center>
               <TabPanels>
                 <TabPanel>
-                  <Box
-                    mt="50px"
-                   
-                    fontFamily="poppins"
-                    className="skill--scroll"
-                  >
-                  
+                  <Box mt="50px" fontFamily="poppins" className="skill--scroll">
                     <Center>
                       <SimpleGrid columns={2} spacing={10}>
                         {Frontenddata.map((skill, id) => (
@@ -462,20 +406,21 @@ import {
                             borderRadius={10}
                             w="100px"
                             bg={colorMode === "light" ? "#0f1624" : "#edf2f8"}
-                            color={colorMode === "light" ? "#edf2f8" : "#0f1624"}
+                            color={
+                              colorMode === "light" ? "#edf2f8" : "#0f1624"
+                            }
                             key={id}
                           >
                             <Center>
-                            
                               <Stack>
-                            <Center>
-                                <Image
-                                  src={TechImage(skill)}
-                                  borderRadius={10}
-                                  alt={skill}
-                                  w="70px"
-                                  h="70px"
-                                />
+                                <Center>
+                                  <Image
+                                    src={TechImage(skill)}
+                                    borderRadius={10}
+                                    alt={skill}
+                                    w="70px"
+                                    h="70px"
+                                  />
                                 </Center>
                                 <Heading fontFamily="poppins" mt={3} size="sm">
                                   {skill}
@@ -490,12 +435,7 @@ import {
                   </Box>
                 </TabPanel>
                 <TabPanel>
-                  <Box
-                    mt="50px"
-                   
-                    fontFamily="poppins"
-                    className="skill--scroll"
-                  >
+                  <Box mt="50px" fontFamily="poppins" className="skill--scroll">
                     <Center>
                       <SimpleGrid columns={2} spacing={10}>
                         {BackendData.map((skill, id) => (
@@ -509,27 +449,27 @@ import {
                                 : {
                                     background: "#c1c3c5",
                                   }
-                                  
                             }
                             ml={5}
                             p={5}
                             borderRadius={10}
                             w="100px"
                             bg={colorMode === "light" ? "#0f1624" : "#edf2f8"}
-                            color={colorMode === "light" ? "#edf2f8" : "#0f1624"}
+                            color={
+                              colorMode === "light" ? "#edf2f8" : "#0f1624"
+                            }
                             key={id}
                           >
                             <Center>
-                            
                               <Stack>
-                            <Center>
-                                <Image
-                                  src={TechImage(skill)}
-                                  borderRadius={10}
-                                  alt={skill}
-                                  w="70px"
-                                  h="70px"
-                                />
+                                <Center>
+                                  <Image
+                                    src={TechImage(skill)}
+                                    borderRadius={10}
+                                    alt={skill}
+                                    w="70px"
+                                    h="70px"
+                                  />
                                 </Center>
                                 <Heading fontFamily="poppins" mt={3} size="sm">
                                   {skill}
@@ -547,13 +487,10 @@ import {
             </Tabs>
           </Center>
         </Box>
-        </Mobile>
-      </>
-    );
-  };
-  
-
-
+      </Mobile>
+    </>
+  );
+};
 
 // function (){
 //     return <div>

@@ -5,13 +5,10 @@ import {
   Heading,
   Spacer,
   Stack,
-  StylesProvider,
   Text,
 } from "@chakra-ui/react";
 import styles from "./About.module.css";
-import ScrollAnimation from "react-animate-on-scroll";
 import { useMediaQuery } from "react-responsive";
-import GitHubCalendar from 'react-github-calendar';
 import { GithubCalender } from "../GitCalender/GithubCalender";
 import { GitStat } from "../GitStat/gitstat";
 
@@ -27,10 +24,6 @@ const Tablet = ({ children }) => {
 const Mobile = ({ children }) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   return isMobile ? children : null;
-};
-const Default = ({ children }) => {
-  const isNotMobile = useMediaQuery({ minWidth: 768 });
-  return isNotMobile ? children : null;
 };
 
 export const About = () => {
@@ -76,7 +69,7 @@ export const About = () => {
                 I'm a Full-Stack Web Developer with the ability to learn and
                 collaborate in rapidly changing environments and compositions.
                 Worked through 1000+ hours of Bootcamp structure learning
-                JavaScript, Node.Js, React.Js, MongoDB, Express, HTML5, and
+                JavaScript, Node.Js, React.Js, ASP .Net Core, MVC, DotNet, C#, MY SQL, MongoDB, Express, HTML5, and
                 CSS3.
               </Text>
               <Text mt={5} mb={20}  fontSize={"15px"}>
